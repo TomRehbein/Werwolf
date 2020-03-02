@@ -15,3 +15,7 @@ C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.Propert
 C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.csproj.GenerateResource.cache
 C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.exe
 C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.pdb
+C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\bin\Debug\Werwolf.exe.manifest
+C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\bin\Debug\Werwolf.application
+C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.exe.manifest
+C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.application
