@@ -1,4 +1,6 @@
 ﻿using Werwolf.Model;
+using Werwolf.ViewModel;
+using Werwolf.Views;
 
 using System;
 using System.Collections.ObjectModel;
@@ -11,8 +13,11 @@ namespace Werwolf.ViewModel
 {
    class GameSetUpViewModel : INotifyPropertyChanged
    {
-      public ObservableCollection<Character> Characters{ get; set; }
+      public static string workDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"/Bundesliga";
+      public static string workDirEtc = workDir + @"/etc";
+      public static string workDirEtcPic = workDirEtc + @"/Pictures";
 
+      public ObservableCollection<Character> Characters{ get; set; }
 
       public MyICommand AddRoleCommand { get; set; }
       public MyICommand DeleteRoleCommand { get; set; }
@@ -33,11 +38,23 @@ namespace Werwolf.ViewModel
 
       public GameSetUpViewModel()
       {
+         DirectorySetUp();
 
 
          AddRoleCommand = new MyICommand(OnAdd, CanAdd);
          DeleteRoleCommand = new MyICommand(OnDelete, CanDelete);
          PlayCommand = new RelayCommand((parameter) => StartGame());
+      }
+
+      private void DirectorySetUp()
+      {
+         if (!Directory.Exists(workDir))
+         {
+            Directory.CreateDirectory(workDir);
+            Directory.CreateDirectory(workDirEtc);
+            //string currentDir = Directory.GetCurrentDirectory();
+            Directory.CreateDirectory(workDirEtcPic);
+         }
       }
 
       private void OnAdd()
@@ -64,7 +81,7 @@ namespace Werwolf.ViewModel
 
       private void StartGame()
       {
-         // Close the View and hands over the Characters
+         
       }
 
       #region PropertyChanged

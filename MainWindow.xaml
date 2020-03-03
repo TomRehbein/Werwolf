@@ -9,6 +9,6 @@
         Title="MainWindow" Height="450" Width="800">
    
     <Grid>
-      <views:ModeratorView x:Name = "MainViewControl" Loaded="MainViewControl_Loaded" />
+      <views:GameSetUpView x:Name = "MainViewControl" Loaded="MainViewControl_Loaded" />
    </Grid>
 </Window>

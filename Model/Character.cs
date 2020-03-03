@@ -63,9 +63,9 @@ namespace Werwolf.Model
       private Image FindImage(string name)
       {
          name = name.Replace(" ", "_");
-         if (File.Exists(ModeratorViewModel.workDirEtcPic + name + ".jpg"))
+         if (File.Exists(GameSetUpViewModel.workDirEtcPic + name + ".jpg"))
          {
-            return Image.FromFile(ModeratorViewModel.workDirEtcPic + name + ".jpg");
+            return Image.FromFile(GameSetUpViewModel.workDirEtcPic + name + ".jpg");
          }
 
          return null;

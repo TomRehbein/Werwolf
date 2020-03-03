@@ -30,13 +30,13 @@
       <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
          <StackPanel Orientation="Horizontal">
             <Label Content="Player Count:" Width="120" VerticalAlignment="Center" Margin="5" Padding="5" FontSize="14" />
-            <TextBox Text="{Binding PlayerCount, Mode=OneWayToSource}" Width="120" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
+            <TextBox Text="{Binding PlayerCount, Mode=TwoWay}" Width="120" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
          </StackPanel>
          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <ListBox ItemsSource="{Binding PlayerRoles, Mode=TwoWay}" SelectedItem="{Binding SelectedRole}" ItemTemplate="{StaticResource characterTemplate}" />
          </StackPanel>
          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Add" Command="{Binding : ICommand}" Width="95" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
+            <Button Content="Add" Command="{Binding AddRoleCommand}" Width="95" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
             <Button Content="Delete" Command="{Binding DeleteRoleCommand}" Width="95" VerticalAlignment="Center" Margin="5" Padding="5" FontSize="14" />
          </StackPanel>
          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
