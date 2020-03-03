@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Werwolf.Model
 {
-   class CharacterRole
+   class Character
    {
       public string Name { get; set; }
       public string Description { get; set; }
@@ -19,7 +19,7 @@ namespace Werwolf.Model
       public uint WakeUpOrder { get; set; }
       public Image Image { get; set; }
 
-      public CharacterRole(string name, string description, bool wakesUp, uint wakeUpOrder)
+      public Character(string name, string description, bool wakesUp, uint wakeUpOrder)
       {
          this.Name = name;
          this.Description = description;
@@ -29,7 +29,7 @@ namespace Werwolf.Model
          this.Image = FindImage(name);
       }
 
-      public CharacterRole(string name, string description, bool wakesUp)
+      public Character(string name, string description, bool wakesUp)
       {
          this.Name = name;
          this.Description = description;
@@ -38,7 +38,7 @@ namespace Werwolf.Model
          this.Image = FindImage(name);
       }
 
-      public CharacterRole(string name, bool wakesUp, uint wakeUpOrder)
+      public Character(string name, bool wakesUp, uint wakeUpOrder)
       {
          this.Name = name;
          this.Alive = true;
@@ -47,7 +47,7 @@ namespace Werwolf.Model
          this.Image = FindImage(name);
       }
 
-      public CharacterRole(string name, bool wakesUp)
+      public Character(string name, bool wakesUp)
       {
          this.Name = name;
          this.Alive = true;
@@ -58,7 +58,7 @@ namespace Werwolf.Model
       private Image FindImage(string name)
       {
          name = name.Replace(" ", "_");
-         if(File.Exists(ModeratorViewModel.workDirEtcPic + name + ".jpg"))
+         if (File.Exists(ModeratorViewModel.workDirEtcPic + name + ".jpg"))
          {
             return Image.FromFile(ModeratorViewModel.workDirEtcPic + name + ".jpg");
          }
@@ -67,7 +67,7 @@ namespace Werwolf.Model
       }
 
       public void Ability()
-      { 
+      {
       }
    }
 }
