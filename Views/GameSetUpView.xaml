@@ -16,6 +16,15 @@
    <UserControl.DataContext>
       <viewModel:GameSetUpViewModel/>
    </UserControl.DataContext>
+
+   <UserControl.Resources>
+      <DataTemplate x:Key="characterTemplate">
+         <StackPanel Orientation="Horizontal">
+            <Image Source="{Binding Source=Image, Mode=OneWay}" VerticalAlignment="Center" Width="100" Margin="5" />
+            <TextBox Text="{Binding Path=CharacterCount, Mode=TwoWay}" VerticalAlignment="Center" Width = "100" Margin="5" Padding="5" FontSize="14" />
+         </StackPanel>
+      </DataTemplate>
+   </UserControl.Resources>
    
    <Grid>
       <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
@@ -23,7 +32,16 @@
             <Label Content="Player Count:" Width="120" VerticalAlignment="Center" Margin="5" Padding="5" FontSize="14" />
             <TextBox Text="{Binding PlayerCount, Mode=OneWayToSource}" Width="120" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
          </StackPanel>
+         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <ListBox ItemsSource="{Binding PlayerRoles, Mode=TwoWay}" SelectedItem="{Binding SelectedRole}" ItemTemplate="{StaticResource characterTemplate}" />
+         </StackPanel>
+         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Add" Command="{Binding AddRoleCommand}" Width="95" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
+            <Button Content="Delete" Command="{Binding DeleteRoleCommand}" Width="95" VerticalAlignment="Center" Margin="5" Padding="5" FontSize="14" />
+         </StackPanel>
+         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Play" Command="{Binding PlayCommand}" Width="150" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
+         </StackPanel>
       </StackPanel>
-      
    </Grid>
 </UserControl>
