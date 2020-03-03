@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Werwolf.Model;
+
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
@@ -13,12 +15,15 @@ namespace Werwolf.ViewModel
       public static string workDirEtc = workDir + @"/etc";
       public static string workDirEtcPic = workDirEtc + @"/Pictures";
 
+      public int PlayerCount { get; set; }
+      public Character[] PlayerRoles;
+
       public ModeratorViewModel()
       {
-         SetUp();
+         DirectorySetUp();
       }
 
-      private void SetUp()
+      private void DirectorySetUp()
       {
          if (!Directory.Exists(workDir))
          {
@@ -29,6 +34,9 @@ namespace Werwolf.ViewModel
          }
       }
 
+      public void GameSetUp()
+      {
 
+      }
    }
 }

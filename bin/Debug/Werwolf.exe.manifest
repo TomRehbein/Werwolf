@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Werwolf.exe" size="1091480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Werwolf.exe" size="1094040">
       <assemblyIdentity name="Werwolf" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VAd3LgEI4sW2qiFlQV/D3iO6DxbQzpNHZ8kdx7I9LHU=</dsig:DigestValue>
+        <dsig:DigestValue>DerkNfx0DvulhTmh4KfknUSn3R4xpUWdrybQ70rR8h8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

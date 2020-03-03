@@ -85,7 +85,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Character.cs" />
+    <Compile Include="ViewModel\GameSetUpViewModel.cs" />
     <Compile Include="ViewModel\ModeratorViewModel.cs" />
+    <Compile Include="Views\GameSetUpView.xaml.cs">
+      <DependentUpon>GameSetUpView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ModeratorView.xaml.cs">
       <DependentUpon>ModeratorView.xaml</DependentUpon>
     </Compile>
@@ -102,6 +106,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\GameSetUpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ModeratorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
