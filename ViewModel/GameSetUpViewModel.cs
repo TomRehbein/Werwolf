@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace Werwolf.ViewModel
 {
-   class GameSetUpViewModel
+   class GameSetUpViewModel : INotifyPropertyChanged
    {
       public ObservableCollection<Character> Characters{ get; set; }
 
@@ -66,5 +66,19 @@ namespace Werwolf.ViewModel
       {
          // Close the View and hands over the Characters
       }
+
+      #region PropertyChanged
+
+      public event PropertyChangedEventHandler PropertyChanged;
+
+      private void RaisePropertyChanged(string property)
+      {
+         if (PropertyChanged != null)
+         {
+            PropertyChanged(this, new PropertyChangedEventArgs(property));
+         }
+      }
+
+      #endregion PropertyChanged
    }
 }

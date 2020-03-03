@@ -20,6 +20,9 @@
    </UserControl.Resources>
 
    <Grid>
-      <Button Content="New Game" />
+      <!--<ContentControl Content="{Binding ViewModel}" />-->
+
+      <Button Content="New Game" Command="{Binding OpenGameSetUpViewCommand}" />
+      <!--<Button Content="New Game" Command="{Binding OpenGameSetUpViewCommand}" />-->
    </Grid>
 </UserControl>

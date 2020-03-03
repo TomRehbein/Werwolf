@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace Werwolf.ViewModel
 {
-   class ModeratorViewModel
+   class ModeratorViewModel : INotifyPropertyChanged
    {
       public static string workDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"/Bundesliga";
       public static string workDirEtc = workDir + @"/etc";
@@ -38,5 +38,19 @@ namespace Werwolf.ViewModel
       {
 
       }
+
+      #region PropertyChanged
+
+      public event PropertyChangedEventHandler PropertyChanged;
+
+      private void RaisePropertyChanged(string property)
+      {
+         if (PropertyChanged != null)
+         {
+            PropertyChanged(this, new PropertyChangedEventArgs(property));
+         }
+      }
+
+      #endregion PropertyChanged
    }
 }
