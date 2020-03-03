@@ -87,6 +87,8 @@
     <Compile Include="Model\Character.cs" />
     <Compile Include="ViewModel\GameSetUpViewModel.cs" />
     <Compile Include="ViewModel\ModeratorViewModel.cs" />
+    <Compile Include="ViewModel\MyICommand.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="Views\GameSetUpView.xaml.cs">
       <DependentUpon>GameSetUpView.xaml</DependentUpon>
     </Compile>
