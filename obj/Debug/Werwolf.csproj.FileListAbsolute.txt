@@ -21,3 +21,5 @@ C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.exe.man
 C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Werwolf.application
 C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Views\GameSetUpView.g.cs
 C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Views\GameSetUpView.baml
+C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Views\CharactorSelectionView.g.cs
+C:\Users\Tom\Documents\VS2017\Projects\Werwolf\Werwolf\obj\Debug\Views\CharactorSelectionView.baml
