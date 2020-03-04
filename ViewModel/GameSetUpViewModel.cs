@@ -13,15 +13,19 @@ namespace Werwolf.ViewModel
 {
    class GameSetUpViewModel : INotifyPropertyChanged
    {
-      public static string workDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"/Werewolf";
-      public static string workDirEtc = workDir + @"/etc";
-      public static string workDirEtcPic = workDirEtc + @"/Pictures";
+      public static string WorkDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"/Werewolf";
+      public static string WorkDirEtc = WorkDir + @"/etc";
+      public static string WorkDirEtcPic = WorkDirEtc + @"/png";
 
       public ObservableCollection<Character> Characters { get; set; }
 
       public MyICommand AddRoleCommand { get; set; }
       public MyICommand DeleteRoleCommand { get; set; }
       public RelayCommand PlayCommand { get; set; }
+
+      public Character SelectedCharacter { get; set; }
+
+      /*
 
       private Character _selectedCharacter { get; set; }
       public Character SelectedCharacter
@@ -34,12 +38,12 @@ namespace Werwolf.ViewModel
          {
             _selectedCharacter = value;
          }
-      }
+      }*/
 
       public GameSetUpViewModel()
       {
          DirectorySetUp();
-
+         DirectoryAndFileSetUp();
 
          AddRoleCommand = new MyICommand(OnAdd, CanAdd);
          DeleteRoleCommand = new MyICommand(OnDelete, CanDelete);
@@ -48,12 +52,47 @@ namespace Werwolf.ViewModel
 
       private void DirectorySetUp()
       {
-         if (!Directory.Exists(workDir))
+         if (!Directory.Exists(WorkDir))
          {
-            Directory.CreateDirectory(workDir);
-            Directory.CreateDirectory(workDirEtc);
+            Directory.CreateDirectory(WorkDir);
+            Directory.CreateDirectory(WorkDirEtc);
             //string currentDir = Directory.GetCurrentDirectory();
-            Directory.CreateDirectory(workDirEtcPic);
+            Directory.CreateDirectory(WorkDirEtcPic);
+         }
+      }
+
+      private void DirectoryAndFileSetUp()
+      {
+         // move all pic to the Dir
+         
+         
+         if (File.Exists(WorkDirEtc + @"/Characters.json"))
+         {
+            string[] pics = Directory.GetFiles(WorkDirEtcPic);
+            int count = Directory.GetFiles(WorkDirEtcPic).Length;
+            ObservableCollection<Character> c = new ObservableCollection<Character>();
+
+            foreach (string pic in pics)
+            {
+               string nameWithScore = Path.GetFileName(pic);
+
+               nameWithScore = nameWithScore.Replace("_", " ");
+               nameWithScore = nameWithScore.Replace(".png", "");
+
+               Character character = new Character(nameWithScore, false, false);
+               try
+               {
+                  Characters.Add(character);
+               }
+               catch
+               {
+                  c.Add(character);
+                  Characters = c;
+               }
+               count--;
+            }
+
+            new CreateJson(WorkDirEtc, Characters);
          }
       }
 

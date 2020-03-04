@@ -63,6 +63,9 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -86,10 +89,11 @@
     </ApplicationDefinition>
     <Compile Include="Model\Character.cs" />
     <Compile Include="ViewModel\CharactorSelectionViewModel.cs" />
+    <Compile Include="Json\CreateJson.cs" />
     <Compile Include="ViewModel\GameSetUpViewModel.cs" />
     <Compile Include="ViewModel\ModeratorViewModel.cs" />
-    <Compile Include="ViewModel\MyICommand.cs" />
-    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="Commands\MyICommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Views\CharactorSelectionView.xaml.cs">
       <DependentUpon>CharactorSelectionView.xaml</DependentUpon>
     </Compile>
@@ -143,7 +147,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Charactors.json" />
+    <None Include="Characters.json" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -166,73 +171,41 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\jpg\Alien.jpg" />
-    <Resource Include="Pictures\jpg\Alien2.jpg" />
-    <Resource Include="Pictures\jpg\AlphaWolf.jpg" />
-    <Resource Include="Pictures\jpg\Apprentice_Assassin.jpg" />
-    <Resource Include="Pictures\jpg\Apprentice_Seer.jpg" />
-    <Resource Include="Pictures\jpg\Apprentice_Tanner.jpg" />
-    <Resource Include="Pictures\jpg\Assassin.jpg" />
-    <Resource Include="Pictures\jpg\Aura_Seer.jpg" />
-    <Resource Include="Pictures\jpg\Beholder.jpg" />
-    <Resource Include="Pictures\jpg\Blob.jpg" />
-    <Resource Include="Pictures\jpg\Bodyguard.jpg" />
-    <Resource Include="Pictures\jpg\Body_Snatcher.jpg" />
-    <Resource Include="Pictures\jpg\Copycat.jpg" />
-    <Resource Include="Pictures\jpg\Cow.jpg" />
-    <Resource Include="Pictures\jpg\Cupid.jpg" />
-    <Resource Include="Pictures\jpg\Curator.jpg" />
-    <Resource Include="Pictures\jpg\Cursed.jpg" />
-    <Resource Include="Pictures\jpg\Diseased.jpg" />
-    <Resource Include="Pictures\jpg\Doppelgaenger.jpg" />
-    <Resource Include="Pictures\jpg\Dream_Wolf.jpg" />
-    <Resource Include="Pictures\jpg\Drunk.jpg" />
-    <Resource Include="Pictures\jpg\Empath.jpg" />
-    <Resource Include="Pictures\jpg\Exposer.jpg" />
-    <Resource Include="Pictures\jpg\Gremlin.jpg" />
-    <Resource Include="Pictures\jpg\Groob_%28Alien%29.jpg" />
-    <Resource Include="Pictures\jpg\Hunter.jpg" />
-    <Resource Include="Pictures\jpg\Insomniac.jpg" />
-    <Resource Include="Pictures\jpg\Instigater.jpg" />
-    <Resource Include="Pictures\jpg\Leader.jpg" />
-    <Resource Include="Pictures\jpg\Marksman.jpg" />
-    <Resource Include="Pictures\jpg\Mason.jpg" />
-    <Resource Include="Pictures\jpg\Minion.jpg" />
-    <Resource Include="Pictures\jpg\Mortican.jpg" />
-    <Resource Include="Pictures\jpg\Mystic_Wolf.jpg" />
-    <Resource Include="Pictures\jpg\Nostradamus.jpg" />
-    <Resource Include="Pictures\jpg\Oracle.jpg" />
-    <Resource Include="Pictures\jpg\Paranormal_Investigator.jpg" />
-    <Resource Include="Pictures\jpg\Pickpocket.jpg" />
-    <Resource Include="Pictures\jpg\Priest.jpg" />
-    <Resource Include="Pictures\jpg\Prince.jpg" />
-    <Resource Include="Pictures\jpg\Psychic.jpg" />
-    <Resource Include="Pictures\jpg\Rascal.jpg" />
-    <Resource Include="Pictures\jpg\Renfield.jpg" />
-    <Resource Include="Pictures\jpg\Revealer.jpg" />
-    <Resource Include="Pictures\jpg\Robber.jpg" />
-    <Resource Include="Pictures\jpg\Robber2.jpg" />
-    <Resource Include="Pictures\jpg\Seer.jpg" />
-    <Resource Include="Pictures\jpg\Seer2.jpg" />
-    <Resource Include="Pictures\jpg\Sentinel.jpg" />
-    <Resource Include="Pictures\jpg\Squire.jpg" />
-    <Resource Include="Pictures\jpg\Synthetic_Alien.jpg" />
-    <Resource Include="Pictures\jpg\Tanner.jpg" />
-    <Resource Include="Pictures\jpg\Tanner2.jpg" />
-    <Resource Include="Pictures\jpg\The_Count.jpg" />
-    <Resource Include="Pictures\jpg\The_Master.jpg" />
-    <Resource Include="Pictures\jpg\Thing.jpg" />
-    <Resource Include="Pictures\jpg\Troublemaker.jpg" />
-    <Resource Include="Pictures\jpg\Troublemaker2.jpg" />
-    <Resource Include="Pictures\jpg\Vampire.jpg" />
-    <Resource Include="Pictures\jpg\Vampire2.jpg" />
-    <Resource Include="Pictures\jpg\Villager.jpg" />
-    <Resource Include="Pictures\jpg\Village_Idiot.jpg" />
-    <Resource Include="Pictures\jpg\Werewolf.jpg" />
-    <Resource Include="Pictures\jpg\Werewolf2.jpg" />
-    <Resource Include="Pictures\jpg\Werewolf3.jpg" />
-    <Resource Include="Pictures\jpg\Witch.jpg" />
-    <Resource Include="Pictures\jpg\Zerb_%28Alien%29.jpg" />
+    <Resource Include="Pictures\png\Apprentice_Seer.png" />
+    <Resource Include="Pictures\png\Aura_Seer.png" />
+    <Resource Include="Pictures\png\Bodygurd.png" />
+    <Resource Include="Pictures\png\Cult_Leader.png" />
+    <Resource Include="Pictures\png\Cupid.png" />
+    <Resource Include="Pictures\png\Cursed.png" />
+    <Resource Include="Pictures\png\Diseased.png" />
+    <Resource Include="Pictures\png\Doppelgaenger.png" />
+    <Resource Include="Pictures\png\Drunk.png" />
+    <Resource Include="Pictures\png\Ghost.png" />
+    <Resource Include="Pictures\png\Hoodlum.png" />
+    <Resource Include="Pictures\png\Hunter.png" />
+    <Resource Include="Pictures\png\Lone_Wolf.png" />
+    <Resource Include="Pictures\png\Lycan.png" />
+    <Resource Include="Pictures\png\Mason.png" />
+    <Resource Include="Pictures\png\Mayor.png" />
+    <Resource Include="Pictures\png\Minion.png" />
+    <Resource Include="Pictures\png\Moderatoer.png" />
+    <Resource Include="Pictures\png\Old_Hag.png" />
+    <Resource Include="Pictures\png\Pacifist.png" />
+    <Resource Include="Pictures\png\Pi.png" />
+    <Resource Include="Pictures\png\Priest.png" />
+    <Resource Include="Pictures\png\Prince.png" />
+    <Resource Include="Pictures\png\Seer.png" />
+    <Resource Include="Pictures\png\Sorceress.png" />
+    <Resource Include="Pictures\png\Spellcaster.png" />
+    <Resource Include="Pictures\png\Tanner.png" />
+    <Resource Include="Pictures\png\Tough_Guy.png" />
+    <Resource Include="Pictures\png\Troublemaker.png" />
+    <Resource Include="Pictures\png\Vampire.png" />
+    <Resource Include="Pictures\png\Villager.png" />
+    <Resource Include="Pictures\png\Villager_Idiot.png" />
+    <Resource Include="Pictures\png\Werewolf.png" />
+    <Resource Include="Pictures\png\Witch.png" />
+    <Resource Include="Pictures\png\Wolf_Cub.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

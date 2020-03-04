@@ -1,0 +1,215 @@
+{
+  "PNG Directory": "C:\\ProgramData/Werewolf/etc/png",
+  "Characters": [
+    {
+      "Name": "Apprentice Seer",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 4
+    },
+    {
+      "Name": "Aura Seer",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 3
+    },
+    {
+      "Name": "Bodygurd",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 3
+    },
+    {
+      "Name": "Cult Leader",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 1
+    },
+    {
+      "Name": "Cupid",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": -3
+    },
+    {
+      "Name": "Cursed",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Diseased",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Doppelgaenger",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Drunk",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Ghost",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Hoodlum",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Hunter",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Lone Wolf",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Lycan",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Mason",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Mayor",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Minion",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Moderatoer",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Old Hag",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Pacifist",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Pi",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Priest",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Prince",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Seer",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Sorceress",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Spellcaster",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Tanner",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Tough Guy",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Troublemaker",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Vampire",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Villager",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Villager Idiot",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Werewolf",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Witch",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    },
+    {
+      "Name": "Wolf Cub",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Score": 0
+    }
+  ]
+}
