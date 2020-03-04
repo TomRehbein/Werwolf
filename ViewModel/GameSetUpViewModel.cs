@@ -13,11 +13,11 @@ namespace Werwolf.ViewModel
 {
    class GameSetUpViewModel : INotifyPropertyChanged
    {
-      public static string workDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"/Bundesliga";
+      public static string workDir = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + @"/Werewolf";
       public static string workDirEtc = workDir + @"/etc";
       public static string workDirEtcPic = workDirEtc + @"/Pictures";
 
-      public ObservableCollection<Character> Characters{ get; set; }
+      public ObservableCollection<Character> Characters { get; set; }
 
       public MyICommand AddRoleCommand { get; set; }
       public MyICommand DeleteRoleCommand { get; set; }
@@ -81,7 +81,7 @@ namespace Werwolf.ViewModel
 
       private void StartGame()
       {
-         
+
       }
 
       #region PropertyChanged

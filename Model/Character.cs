@@ -18,9 +18,8 @@ namespace Werwolf.Model
       public bool WakesUp { get; set; }
       public int WakeUpOrder { get; set; }
       public Image Image { get; set; }
-      public int Count { get; set; }
 
-      public Character(string name, string description, bool werewolf, bool wakesUp, int wakeUpOrder, int count)
+      public Character(string name, string description, bool werewolf, bool wakesUp, int wakeUpOrder)
       {
          this.Name = name;
          this.Description = description;
@@ -28,36 +27,32 @@ namespace Werwolf.Model
          this.WakesUp = wakesUp;
          this.WakeUpOrder = wakeUpOrder;
          this.Image = FindImage(name);
-         this.Count = count;
       }
 
-      public Character(string name, string description, bool werewolf, bool wakesUp, int count)
+      public Character(string name, string description, bool werewolf, bool wakesUp)
       {
          this.Name = name;
          this.Description = description;
          this.Werewolf = werewolf;
          this.WakesUp = wakesUp;
          this.Image = FindImage(name);
-         this.Count = count;
       }
 
-      public Character(string name, bool werewolf, bool wakesUp, int wakeUpOrder, int count)
+      public Character(string name, bool werewolf, bool wakesUp, int wakeUpOrder)
       {
          this.Name = name;
          this.Werewolf = werewolf;
          this.WakesUp = wakesUp;
          this.WakeUpOrder = wakeUpOrder;
          this.Image = FindImage(name);
-         this.Count = count;
       }
 
-      public Character(string name, bool werewolf, bool wakesUp, int count)
+      public Character(string name, bool werewolf, bool wakesUp)
       {
          this.Name = name;
          this.Werewolf = werewolf;
          this.WakesUp = wakesUp;
          this.Image = FindImage(name);
-         this.Count = count;
       }
 
       private Image FindImage(string name)

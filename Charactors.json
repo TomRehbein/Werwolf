@@ -1,1 +1,95 @@
-﻿
+﻿{
+  "Characters": [
+    {
+      "Name": "Villager",
+      "Description": "Don't wake up at night, no special skills.",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Image": "/etc/Pictures/jpg/Villager.jpg"
+    },
+    {
+      "Name": "Werewolf",
+      "Description": "Wake up at night and all werewolves decide together who will be killed.",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Werewolf.jpg"
+    },
+    {
+      "Name": "Seer",
+      "Description": "",
+      "Werewolf": false,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Seer.jpg"
+    },
+    {
+      "Name": "Witch",
+      "Description": "Only once has the opportunity to save the player killed by the werewolf.",
+      "Werewolf": false,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Witch.jpg"
+    },
+    {
+      "Name": "Tanner",
+      "Description": "",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Image": "/etc/Pictures/jpg/Tanner.jpg"
+    },
+    {
+      "Name": "Minion",
+      "Description": "",
+      "Werewolf": false,
+      "WakesUp": false,
+      "Image": "/etc/Pictures/jpg/Minion.jpg"
+    },
+    {
+      "Name": "Mason",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    },
+    {
+      "Name": "Trobulemaker",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    },
+    {
+      "Name": "Robber",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    },
+    {
+      "Name": "Hunter",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    },
+    {
+      "Name": "Doppelgaenger",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    },
+    {
+      "Name": "Drunk",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    },
+    {
+      "Name": "Insomniac",
+      "Description": "",
+      "Werewolf": true,
+      "WakesUp": true,
+      "Image": "/etc/Pictures/jpg/Alpha_Wolf.jpg"
+    }
+  ]
+}
