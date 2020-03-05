@@ -79,7 +79,7 @@ namespace Werwolf.ViewModel
                nameWithScore = nameWithScore.Replace("_", " ");
                nameWithScore = nameWithScore.Replace(".png", "");
 
-               Character character = new Character(nameWithScore, false, false);
+               Character character = new Character(nameWithScore);
                try
                {
                   Characters.Add(character);
