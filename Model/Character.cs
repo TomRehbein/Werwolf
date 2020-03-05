@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows;
 
 namespace Werwolf.Model
 {
@@ -25,15 +26,15 @@ namespace Werwolf.Model
          this.WakesUp = wakesUp;
          string _score = nameWithScore.Substring(nameWithScore.Length - 2, 2);
          this.Score = Convert.ToInt32(_score);
-         this.Image = FindImage(Name);
+         this.Image = FindImage(Name, _score);
       }
 
-      private Image FindImage(string name)
+      private Image FindImage(string name, string score)
       {
          name = name.Replace(" ", "_");
-         if (File.Exists(GameSetUpViewModel.WorkDirEtcPic + name + ".png"))
+         if (File.Exists(GameSetUpViewModel.WorkDirEtcPic + @"/" + name + score + ".png"))
          {
-            return Image.FromFile(GameSetUpViewModel.WorkDirEtcPic + name + ".png");
+            return Image.FromFile(GameSetUpViewModel.WorkDirEtcPic + @"/" + name + score + ".png");
          }
 
          return null;

@@ -66,7 +66,7 @@ namespace Werwolf.ViewModel
          // move all pic to the Dir
          
          
-         if (File.Exists(WorkDirEtc + @"/Characters.json"))
+         if (!File.Exists(WorkDirEtc + @"/Characters.json"))
          {
             string[] pics = Directory.GetFiles(WorkDirEtcPic);
             int count = Directory.GetFiles(WorkDirEtcPic).Length;
