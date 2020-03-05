@@ -89,7 +89,16 @@ namespace Werwolf.Model
 
          this.WakesUpOneNight = Enum.IsDefined(typeof(WakesUpOneNightEnum), Name);
          string _score = nameWithScore.Substring(nameWithScore.Length - 2, 2);
-         this.Score = Convert.ToInt32(_score);
+
+         try
+         {
+            this.Score = Convert.ToInt32(_score);
+         }
+         catch
+         {
+            this.Score = 0;
+         }
+
          this.Image = FindImage(Name, _score);
 
          this.Name = Name.Replace("_", " ");

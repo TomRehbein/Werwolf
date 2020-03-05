@@ -1,5 +1,4 @@
 ﻿using Werwolf.Model;
-using Werwolf.ViewModel;
 using Werwolf.Views;
 
 using System;

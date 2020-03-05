@@ -1,12 +1,10 @@
 ﻿using Werwolf.Model;
-using Werwolf.ViewModel;
 using Werwolf.Views;
 
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
-using System.Windows.Input;
 using System.Windows;
 
 namespace Werwolf.ViewModel
@@ -45,7 +43,7 @@ namespace Werwolf.ViewModel
          DirectorySetUp();
          DirectoryAndFileSetUp();
 
-         CharacterJson.GetCharactersFromJson();
+         Characters = CharacterJson.GetCharactersFromJson();
 
          AddRoleCommand = new MyICommand(OnAdd, CanAdd);
          DeleteRoleCommand = new MyICommand(OnDelete, CanDelete);

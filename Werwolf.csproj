@@ -89,7 +89,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Character.cs" />
     <Compile Include="ViewModel\CharactorSelectionViewModel.cs" />
-    <Compile Include="Json\Json.cs" />
+    <Compile Include="Json\CharacterJson.cs" />
     <Compile Include="ViewModel\GameSetUpViewModel.cs" />
     <Compile Include="ViewModel\ModeratorViewModel.cs" />
     <Compile Include="Commands\MyICommand.cs" />

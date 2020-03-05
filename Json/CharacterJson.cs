@@ -2,19 +2,17 @@
 
 using System;
 using System.Collections.ObjectModel;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json.Linq;
-using System.Windows;
 
 namespace Werwolf.ViewModel
 {
-   class Json
+   class CharacterJson
    {
       public ObservableCollection<Character> Characters { get; set; }
 
-      public Json(string workDirEtc, ObservableCollection<Character> characters)
+      public CharacterJson(string workDirEtc, ObservableCollection<Character> characters)
       {
          this.Characters = characters;
 
@@ -87,12 +85,34 @@ namespace Werwolf.ViewModel
          File.WriteAllText(GetJsonPath(), json.ToString());
       }
 
-      public static void GetCharactersFromJson()
+      public static ObservableCollection<Character> GetCharactersFromJson()
       {
-         GetDeliveryJArray();
+         ObservableCollection<Character> characters = new ObservableCollection<Character>();
+
+         JArray charactersJArray = GetCharacterJArray();
+         {
+            foreach(JObject c in charactersJArray)
+            {
+               string name = (string)c["Name"];
+               name = name.Replace(" ", "_");
+               if((Int32)c["Score"] >= 0)
+               {
+                  name += "+" + c["Score"];
+               }
+               else
+               {
+                  name += c["Score"];
+               }
+
+               Character character = new Character(name);
+               characters.Add(character);
+            }
+         }
+
+         return characters;
       }
 
-      private static JArray GetDeliveryJArray()
+      private static JArray GetCharacterJArray()
       {
          string jsonText = File.ReadAllText(GetJsonPath());
          JObject jObject = JObject.Parse(jsonText);
