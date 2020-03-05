@@ -45,6 +45,8 @@ namespace Werwolf.ViewModel
          DirectorySetUp();
          DirectoryAndFileSetUp();
 
+         CharacterJson.GetCharactersFromJson();
+
          AddRoleCommand = new MyICommand(OnAdd, CanAdd);
          DeleteRoleCommand = new MyICommand(OnDelete, CanDelete);
          PlayCommand = new RelayCommand((parameter) => StartGame());
@@ -92,7 +94,7 @@ namespace Werwolf.ViewModel
                count--;
             }
 
-            new CreateJson(WorkDirEtc, Characters);
+            new CharacterJson(WorkDirEtc, Characters);
          }
       }
 

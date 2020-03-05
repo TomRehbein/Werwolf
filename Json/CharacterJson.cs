@@ -6,14 +6,15 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json.Linq;
+using System.Windows;
 
 namespace Werwolf.ViewModel
 {
-   class CreateJson
+   class Json
    {
       public ObservableCollection<Character> Characters { get; set; }
 
-      public CreateJson(string workDirEtc, ObservableCollection<Character> characters)
+      public Json(string workDirEtc, ObservableCollection<Character> characters)
       {
          this.Characters = characters;
 
@@ -21,7 +22,7 @@ namespace Werwolf.ViewModel
          CreateEntry();
       }
 
-      private string GetJsonPath()
+      private static string GetJsonPath()
       {
          return GameSetUpViewModel.WorkDirEtc + @"/Characters.json";
       }
@@ -84,6 +85,18 @@ namespace Werwolf.ViewModel
                         new JProperty("Troublemaker", 4)))));
 
          File.WriteAllText(GetJsonPath(), json.ToString());
+      }
+
+      public static void GetCharactersFromJson()
+      {
+         GetDeliveryJArray();
+      }
+
+      private static JArray GetDeliveryJArray()
+      {
+         string jsonText = File.ReadAllText(GetJsonPath());
+         JObject jObject = JObject.Parse(jsonText);
+         return (JArray)jObject["Characters"];
       }
    }
 }

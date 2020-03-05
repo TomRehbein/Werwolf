@@ -89,7 +89,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Character.cs" />
     <Compile Include="ViewModel\CharactorSelectionViewModel.cs" />
-    <Compile Include="Json\CreateJson.cs" />
+    <Compile Include="Json\Json.cs" />
     <Compile Include="ViewModel\GameSetUpViewModel.cs" />
     <Compile Include="ViewModel\ModeratorViewModel.cs" />
     <Compile Include="Commands\MyICommand.cs" />
@@ -207,5 +207,6 @@
     <Resource Include="Pictures\png\Witch.png" />
     <Resource Include="Pictures\png\Wolf_Cub.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
