@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Werwolf"
         xmlns:views = "clr-namespace:Werwolf.Views" 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="800" MinWidth="1200">
    
     <Grid>
       <views:GameSetUpView x:Name = "MainViewControl" Loaded="MainViewControl_Loaded" />

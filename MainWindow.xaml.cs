@@ -14,8 +14,8 @@ namespace Werwolf
 
       private void MainViewControl_Loaded(object sender, RoutedEventArgs e)
       {
-         Werwolf.ViewModel.ModeratorViewModel MainViewModelObject =
-            new Werwolf.ViewModel.ModeratorViewModel();
+         Werwolf.ViewModel.GameSetUpViewModel MainViewModelObject =
+            new Werwolf.ViewModel.GameSetUpViewModel();
 
          MainViewControl.DataContext = MainViewModelObject;
       }

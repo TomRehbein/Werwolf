@@ -60,7 +60,7 @@ namespace Werwolf.Model
       public bool WakesUpAllNights { get; set; }
       public bool WakesUpOneNight { get; set; }
       public int Score { get; set; }
-      public Image Image { get; set; }
+      public string Image { get; set; }
 
       public Character(string nameWithScore)
       {
@@ -99,7 +99,7 @@ namespace Werwolf.Model
             this.Score = 0;
          }
 
-         this.Image = FindImage(Name, _score);
+         this.Image = FindImage(nameWithScore);
 
          this.Name = Name.Replace("_", " ");
       }
@@ -118,26 +118,22 @@ namespace Werwolf.Model
 
          if(Score >= 0)
          {
-            this.Image = FindImage(Name.Replace(" ", "_"), "+" + Score.ToString());
+            this.Image = FindImage(Name.Replace(" ", "_") + "+" + Score.ToString());
          }
          else
          {
-            this.Image = FindImage(Name.Replace(" ", "_"), Score.ToString());
+            this.Image = FindImage(Name.Replace(" ", "_") + Score.ToString());
          }
       }
 
-      private Image FindImage(string name, string score)
+      private string FindImage(string nameWithScore)
       {
-         if (File.Exists(GameSetUpViewModel.WorkDirEtcPic + @"/" + name + score + ".png"))
+         if (File.Exists(GameSetUpViewModel.WorkDirEtcPic + @"/" + nameWithScore + ".png"))
          {
-            return Image.FromFile(GameSetUpViewModel.WorkDirEtcPic + @"/" + name + score + ".png");
+            return GameSetUpViewModel.WorkDirEtcPic + @"/" + nameWithScore + ".png";
          }
 
          return null;
-      }
-
-      public void Ability()
-      {
       }
    }
 }
