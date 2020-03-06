@@ -53,7 +53,7 @@
       <Label Grid.Column="1" Content="Player Count:" Width="120" VerticalAlignment="Center" Margin="5" Padding="5" FontSize="14" />
       <TextBox Grid.Column="2" Text="{Binding PlayerCount, Mode=TwoWay}" Width="120" VerticalAlignment="Center" Margin="5,5,6,5" Padding="5" FontSize="14" />
 
-      <ListBox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1"  ItemsSource="{Binding AllCharacters, Mode=TwoWay}" SelectedItem="{Binding AddSelectedCharacter}" ItemTemplate="{StaticResource characterTemplateBig}" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+      <ListBox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" ItemsSource="{Binding AllCharacters, Mode=TwoWay}" SelectedItem="{Binding AddSelectedCharacter, Mode=TwoWay}" ItemTemplate="{StaticResource characterTemplateBig}" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
          <ListBox.ItemsPanel>
             <ItemsPanelTemplate>
                <StackPanel Orientation="Horizontal" />
@@ -61,7 +61,7 @@
          </ListBox.ItemsPanel>
       </ListBox>
 
-      <ListBox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2"  ItemsSource="{Binding PlayerCharacters, Mode=TwoWay}" SelectedItem="{Binding DeleteSelectedCharacter}" ItemTemplate="{StaticResource characterTemplateSmall}" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+      <ListBox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2"  ItemsSource="{Binding PlayerCharacters, Mode=TwoWay}" SelectedItem="{Binding DeleteSelectedCharacter, Mode=TwoWay}" ItemTemplate="{StaticResource characterTemplateSmall}" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
          <ListBox.ItemsPanel>
             <ItemsPanelTemplate>
                <StackPanel Orientation="Horizontal" />

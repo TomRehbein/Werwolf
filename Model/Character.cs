@@ -52,7 +52,7 @@ namespace Werwolf.Model
 
       #endregion Enums
 
-   class Character
+   class Character : IComparable<Character>
    {
       public string Name { get; set; }
       public bool Werewolf { get; set; }
@@ -134,6 +134,12 @@ namespace Werwolf.Model
          }
 
          return null;
+      }
+
+      public int CompareTo(Character other)
+      {
+         if (this.Name == other.Name) return 0;
+         return this.Name.CompareTo(other.Name);
       }
    }
 }

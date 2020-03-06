@@ -6,6 +6,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
 using System.Windows;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Werwolf.ViewModel
 {
@@ -155,8 +157,19 @@ namespace Werwolf.ViewModel
             ObservableCollection<Character> playerCharacters = new ObservableCollection<Character>();
 
             playerCharacters.Add(AddSelectedCharacter);
+
             PlayerCharacters = playerCharacters;
          }
+
+         SortPlayerCharacters();
+      }
+
+      private void SortPlayerCharacters()
+      {
+         ObservableCollection<Character> sorted;
+         sorted = new ObservableCollection<Character>(PlayerCharacters.OrderBy(c => c.Name));
+
+         PlayerCharacters = sorted;
       }
 
       private void OnDelete()

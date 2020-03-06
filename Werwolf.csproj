@@ -171,42 +171,40 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\png\Apprentice_Seer.png" />
-    <Resource Include="Pictures\png\Aura_Seer.png" />
-    <Resource Include="Pictures\png\Bodygurd.png" />
-    <Resource Include="Pictures\png\Cult_Leader.png" />
-    <Resource Include="Pictures\png\Cupid.png" />
-    <Resource Include="Pictures\png\Cursed.png" />
-    <Resource Include="Pictures\png\Diseased.png" />
-    <Resource Include="Pictures\png\Doppelgaenger.png" />
-    <Resource Include="Pictures\png\Drunk.png" />
-    <Resource Include="Pictures\png\Ghost.png" />
-    <Resource Include="Pictures\png\Hoodlum.png" />
-    <Resource Include="Pictures\png\Hunter.png" />
-    <Resource Include="Pictures\png\Lone_Wolf.png" />
-    <Resource Include="Pictures\png\Lycan.png" />
-    <Resource Include="Pictures\png\Mason.png" />
-    <Resource Include="Pictures\png\Mayor.png" />
-    <Resource Include="Pictures\png\Minion.png" />
-    <Resource Include="Pictures\png\Moderatoer.png" />
-    <Resource Include="Pictures\png\Old_Hag.png" />
-    <Resource Include="Pictures\png\Pacifist.png" />
-    <Resource Include="Pictures\png\Pi.png" />
-    <Resource Include="Pictures\png\Priest.png" />
-    <Resource Include="Pictures\png\Prince.png" />
-    <Resource Include="Pictures\png\Seer.png" />
-    <Resource Include="Pictures\png\Sorceress.png" />
-    <Resource Include="Pictures\png\Spellcaster.png" />
-    <Resource Include="Pictures\png\Tanner.png" />
-    <Resource Include="Pictures\png\Tough_Guy.png" />
-    <Resource Include="Pictures\png\Troublemaker.png" />
-    <Resource Include="Pictures\png\Vampire.png" />
-    <Resource Include="Pictures\png\Villager.png" />
-    <Resource Include="Pictures\png\Villager_Idiot.png" />
-    <Resource Include="Pictures\png\Werewolf.png" />
-    <Resource Include="Pictures\png\Witch.png" />
-    <Resource Include="Pictures\png\Wolf_Cub.png" />
+    <Resource Include="Pictures\png\Apprentice_Seer+4.png" />
+    <Resource Include="Pictures\png\Aura_Seer+3.png" />
+    <Resource Include="Pictures\png\Bodyguard+3.png" />
+    <Resource Include="Pictures\png\Cult_Leader+1.png" />
+    <Resource Include="Pictures\png\Cupid-3.png" />
+    <Resource Include="Pictures\png\Cursed-3.png" />
+    <Resource Include="Pictures\png\Diseased+3.png" />
+    <Resource Include="Pictures\png\Doppelgaenger-2.png" />
+    <Resource Include="Pictures\png\Drunk+4.png" />
+    <Resource Include="Pictures\png\Ghost+2.png" />
+    <Resource Include="Pictures\png\Hoodlum+0.png" />
+    <Resource Include="Pictures\png\Hunter+3.png" />
+    <Resource Include="Pictures\png\Lone_Wolf-5.png" />
+    <Resource Include="Pictures\png\Lycan-1.png" />
+    <Resource Include="Pictures\png\Mason+2.png" />
+    <Resource Include="Pictures\png\Mayor+2.png" />
+    <Resource Include="Pictures\png\Minion-6.png" />
+    <Resource Include="Pictures\png\Old_Hag+1.png" />
+    <Resource Include="Pictures\png\Pacifist-1.png" />
+    <Resource Include="Pictures\png\Pi+3.png" />
+    <Resource Include="Pictures\png\Priest+3.png" />
+    <Resource Include="Pictures\png\Prince+3.png" />
+    <Resource Include="Pictures\png\Seer+7.png" />
+    <Resource Include="Pictures\png\Sorceress-3.png" />
+    <Resource Include="Pictures\png\Spellcaster+1.png" />
+    <Resource Include="Pictures\png\Tanner-2.png" />
+    <Resource Include="Pictures\png\Tough_Guy+3.png" />
+    <Resource Include="Pictures\png\Troublemaker-3.png" />
+    <Resource Include="Pictures\png\Vampire-7.png" />
+    <Resource Include="Pictures\png\Villager+1.png" />
+    <Resource Include="Pictures\png\Villager_Idiot+2.png" />
+    <Resource Include="Pictures\png\Werewolf-6.png" />
+    <Resource Include="Pictures\png\Witch+4.png" />
+    <Resource Include="Pictures\png\Wolf_Cub-8.png" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
